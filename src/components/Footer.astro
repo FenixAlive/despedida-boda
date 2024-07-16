@@ -1,1 +1,54 @@
-<a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Freepik - Flaticon</a>
+<div id="footer">@</div>
+<div id="modal" class="column hide">
+    <div class="paper-b">Attributions:</div>
+    <a href="https://www.flaticon.com/free-icons/heart" target="_blank" title="heart icons" class="text-cyan-500">Heart icons created by Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/close" title="close icons" class="text-cyan-500" target="_blank" >Close icons created by Nendra Wahyu  - Flaticon</a>
+    <a href="https://github.com/FenixAlive" target="_blank" class="text-cyan-500">Page: FenixAlive</a>
+    <div class="close-btn" id="closeModal"></div>
+</div>
+<style>
+#footer{
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+	}
+	#footer:hover{
+		scale: 1.2;
+		transition-duration: 150ms;
+		color: #555;
+		cursor: pointer;
+	}
+    #modal{
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        max-width: 100%;
+        padding: 1rem;
+        background-color: #fafafa;
+    }
+    .hide{
+        display: none !important;
+    }
+    .close-btn{
+        position:absolute;
+        top: 0;
+        right: 0;
+        background-image: url(/img/close.png);
+        width: 2rem;
+        height: 2rem;
+        background-size: contain;
+    }
+</style>
+<script>
+	const footer = document.getElementById("footer")
+    const closeModal = document.getElementById("closeModal")
+    const modal = document.getElementById("modal")
+    
+
+    footer.addEventListener("click", toogleModal)
+    closeModal.addEventListener("click", toogleModal)
+
+    function toogleModal(){
+        modal.classList.toggle("hide");
+    }
+</script>

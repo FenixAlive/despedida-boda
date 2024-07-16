@@ -1,6 +1,6 @@
 <div class="principal-img"></div>
 <h1 class="principal-text my-cursive text-pretty">Adrian y Sarahi</h1>
-<div class="space sn"></div>
+<div class="space sn" id="clickable"></div>
 
 <style> 
 .principal-img{
@@ -20,7 +20,7 @@
   width: 100vw;
   max-width: 100%;
   padding: 2rem;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -4;
@@ -35,3 +35,9 @@
     max-width: 100%;
 }
 </style>
+<script>
+  const clickable = document.getElementById("clickable")
+  clickable.addEventListener('click', ()=>{
+    document.getElementById("main").scrollIntoView();
+  });
+</script>

@@ -1,32 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Portada from '../components/Portada.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Despedida Adrian y Sarahi">
 	<Portada></Portada> 
 	
-	<main class="sn column">
+	<main class="sn column" id="main">
 		<h2 class="paper-b text-larger">Despedida de Solteros</h2> 
 		<div class="column gap-4">
 			<div class="row gap-4">
 				<div class="paper-r border-y">Domingo</div>
-				<div class="paper-b text-rose-800 text-big">28</div>
+				<div class="paper-b text-cyan-700 text-big">28</div>
 				<div class="paper-r border-y">A las 2:00 PM</div>
 			</div>
 			<div class="column gap-3">
 				<div class="my-cursive text-larger">Julio</div>
-				<div class="paper-b text-rose-900">2024</div>
+				<div class="paper-b text-cyan-700">2024</div>
 			</div>
 		</div>
 		<div class="column gap-2">
-			<div class="paper-r text-pretty invitation">Los esperamos para esta ocasión especial en el jardin de Cuca.</div>
-			<div class="my-cursive invitation text-rose-950">Rancho Cerro Gordo</div>
+			<div class="my-cursive text-pretty invitation">Los esperamos para esta ocasión especial en el jardin de Cuca.</div>
+			<div class="paper-r invitation  border-y">Rancho Cerro Gordo</div>
 		</div>
-		<h3 class="my-cursive text-sm border-y text-rose-700">Love is in the air</h3>
+		<h3 class="my-cursive text-sm  text-cyan-700">Love is in the air</h3>
+		<Footer></Footer>
 	</main>
-
 </Layout>
 
 <style>
@@ -38,16 +38,12 @@ import Portada from '../components/Portada.astro';
   		min-height: 100vh;
   		background-repeat: repeat;
 		padding: 1rem;
+		position: relative;
 
 	}
-
-	.border-y{
-		border-top: 0.15rem solid #790000;
-		border-bottom: 0.15rem solid #790000;
-		padding: 0.3rem;
-	}
-
 	.invitation{
 		line-height: 2rem;
 	}
+	
 </style>
+
